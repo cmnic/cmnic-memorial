@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+		<meta name="renderer" content="webkit" />
+		<meta name="force-rendering" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>中文虚拟国互联网络信息中心</title>
+
+		<!-- Shortcut Icon -->
+		<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/liyanqwq/staticfiles/img/20200813074443.png" />
+
+		<script>
+			if (window.ActiveXObject || "ActiveXObject" in window) {
+				alert("本网站不支持IE浏览器，请使用Chrome浏览器访问！");
+				window.location.href = "https://www.google.cn/chrome/";
+			}
+		</script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.0/dist/css/mdui.min.css" />
+		<link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.6.2/dist/tailwind.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/material-icons@0.3.1/css/material-icons.min.css">
+		<!-- Style -->
+		<style>
+			body {
+				user-select: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				min-height: 100vh;
+				padding-top: 80px;
+			}
+
+			.typed-cursor {
+				font-weight: 100;
+				color: rgba(0, 0, 0, .2);
+			}
+
+			button {
+				outline: none !important;
+			}
+
+			.icon-box {
+				display: flex;
+				display: -webkit-flex;
+				align-items: center;
+			}
+
+			.main-banner {
+				flex-wrap: wrap;
+			}
+
+			.footer {
+				background-image: linear-gradient(-45deg, #38b2ac, #41d2c9, #38b2ac);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Nav -->
+		<nav class="fixed top-0 w-full flex items-center justify-between flex-wrap bg-teal-500 p-6">
+			<div class="flex items-center flex-shrink-0 text-white mr-6">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" fill="#fff">
+					<g style="opacity:0.64;">
+						<polygon points="10.02 7.12 4.7 4.7 6.68 10.14 9.39 9.39 10.02 7.12" />
+						<polygon points="7.12 13.98 4.7 19.3 10.02 16.88 9.39 14.61 7.12 13.98" />
+						<polygon points="16.88 13.98 14.61 14.61 13.98 16.88 19.3 19.3 16.88 13.98" />
+						<polygon points="16.88 10.02 19.3 4.7 13.98 7.12 14.61 9.39 16.88 10.02" />
+					</g>
+					<path d="M12,0l2.61,9.39L24,12l-9.39,2.61L12,24,9.39,14.61,0,12,9.39,9.39Z" />
+				</svg>&nbsp;
+				<span class="font-semibold text-teal-100 text-xl tracking-tight">中虚网信</span>
+			</div>
+			<div class="block lg:hidden">
+				<button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+				 onclick="togglenavshow()" id="nav-button">
+					<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<title>Menu</title>
+						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+					</svg>
+				</button>
+			</div>
+			<div class="w-full hidden block flex-grow lg:flex lg:items-center lg:w-auto" id="navlist">
+				<div class="text-sm lg:flex-grow">
+					<a href="javascript:void(0)" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 font-bold">
+						主页
+					</a>
+					<a href="javascript:void(0)" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+						关于我们
+					</a>
+					<a href="javascript:void(0)" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+						服务导航
+					</a>
+					<a href="javascript:void(0)" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+						联系我们
+					</a>
+				</div>
+				<div>
+					<a href="javascript:Swal.fire({title: '用户系统未开放！',icon: 'warning',confirmButtonText: '确认'});" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">登录</a>&nbsp;&nbsp;<a
+					 href="javascript:Swal.fire({title: '用户系统未开放！',icon: 'warning',confirmButtonText: '确认'});" class="inline-block text-sm px-4 py-2 leading-none border rounded border-transparent text-teal-500 bg-white mt-4 lg:mt-0">注册</a>
+				</div>
+			</div>
+		</nav>
+		<!-- Nav -->
+		<!-- Banner -->
+		<div class="flex py-24 md:py-32 lg:py-48 bg-teal-100 justify-center main-banner">
+			<div class="text-2xl w-full text-center sm:text-4xl lg:text-5xl mb-6">和我们一起，<span class="font-semibold" id="main-typed"></span></div>
+			<div id="main-banner-actions" class="w-full text-center">
+				<a onclick="return notAvailable()" href="/register" class="px-4 py-2 sm:px-6 sm:py-3 bg-teal-500 text-white rounded">注册账号</a>&emsp;
+				<a onclick="return notAvailable()" href="/services.asp" class="px-4 py-2 sm:px-6 sm:py-3 bg-white rounded">服务导航</a>
+			</div>
+		</div>
+		<!-- Banner -->
+		<!-- Container -->
+		<div class="container mx-auto py-8">
+			<div class="sm:flex sm:justify-content-center">
+				<div class="w-full text-center px-4 py-8 sm:py-4">
+					<div class="bg-blue-500 mx-auto mb-3 w-24 h-24 sm:w-20 sm:h-20 icon-box rounded-full"><span class="material-icons text-white text-5xl sm:text-4xl mx-auto">business</span></div>
+					<div class="text-2xl font-semibold mb-1">门户网站建设</div>
+					<div class="text-1 px-16 sm:px-0 text-gray-600">为你的虚拟国建设自己的门户，增加你虚拟国的可靠度，让全世界听到你的声音。</div>
+				</div>
+				<div class="w-full text-center px-4 py-8 sm:py-4">
+					<div class="bg-pink-500 mx-auto mb-3 w-24 h-24 sm:w-20 sm:h-20 icon-box rounded-full"><span class="material-icons text-white text-5xl sm:text-4xl mx-auto">attach_money</span></div>
+					<div class="text-2xl font-semibold mb-1">货币贸易系统</div>
+					<div class="text-1 px-16 sm:px-0 text-gray-600">借助我们广受好评的虚元系统，你可以在中文虚拟国平台内与其他玩家交易。同时，你可以出售周边产品来获取虚元和现实货币。</div>
+				</div>
+				<div class="w-full text-center px-4 py-8 sm:py-4">
+					<div class="bg-yellow-500 mx-auto mb-3 w-24 h-24 sm:w-20 sm:h-20 icon-box rounded-full"><span class="material-icons text-white text-5xl sm:text-4xl mx-auto">comment</span></div>
+					<div class="text-2xl font-semibold mb-1">社交游戏系统</div>
+					<div class="text-1 px-16 sm:px-0 text-gray-600">借助我们的中文虚拟国平台，你可以轻松地为你的虚拟国招募新的成员，与其他虚拟国进行外交活动。中文虚拟国平台让虚拟国拥有更多元的玩法。</div>
+				</div>
+			</div>
+		</div>
+		<!-- Container -->
+		<!-- Footer -->
+		<footer class="footer text-white mt-3">
+			<div class="container mx-auto p-2 md:p-6 md:pb-12 md:flex">
+				<div class="w-full px-4 py-2">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 24" class="w-1/3 md:w-1/2 mb-4" fill="#fff">
+						<g style="opacity:0.64">
+							<polygon points="10.02 7.12 4.7 4.7 6.68 10.14 9.39 9.39 10.02 7.12" />
+							<polygon points="7.12 13.98 4.7 19.3 10.02 16.88 9.39 14.61 7.12 13.98" />
+							<polygon points="16.88 13.98 14.61 14.61 13.98 16.88 19.3 19.3 16.88 13.98" />
+							<polygon points="16.88 10.02 19.3 4.7 13.98 7.12 14.61 9.39 16.88 10.02" />
+						</g>
+						<path d="M12,0l2.61,9.39L24,12l-9.39,2.61L12,24,9.39,14.61,0,12,9.39,9.39Z" />
+						<path d="M30.29,16A1.51,1.51,0,0,0,32,17.71h5.14V20H32q-4,0-4-4V8q0-4,4-4h5.14V6.29H32A1.51,1.51,0,0,0,30.29,8Z" />
+						<path d="M39.43,4h3.08l4.35,12L51.2,4h3.09V20H52V8L47.77,20H45.94L41.71,8V20H39.43Z" />
+						<path d="M58.86,4l6.85,11.43V4H68V20H65.71L58.86,8.57V20H56.57V4Z" />
+						<path d="M72.57,4V20H70.29V4Z" />
+						<path d="M77.14,16a1.51,1.51,0,0,0,1.72,1.71H84V20H78.86q-4,0-4-4V8q0-4,4-4H84V6.29H78.86A1.51,1.51,0,0,0,77.14,8Z" />
+					</svg>
+					<p class="text-sm text-teal-100">CMNIC是一个中文虚拟国非政府组织，为全球中文虚拟国爱好者提供网络信息服务。</p>
+					<a onclick="return notAvailable()" href="https://icp.cmnic.org/info/number/19260817.html" class="text-sm text-teal-200">虚 ICP 备 19260817 号</a>
+					<a onclick="return notAvailable()" href="https://core.cmnic.org/" class="text-sm text-teal-200">虚主网准 1001 号</a>
+				</div>
+				<div class="w-full px-4 py-2">
+					<h1 class="mb-1 text-xl font-bold">合作伙伴&nbsp;<span class="text-xs font-light">（按字母表排序）</span></h1>
+					<div id="partnerships">
+						<a class="inline-block" target="_blank" href="http://micronations.mysxl.cn/"><img class="rounded w-20 m-1" src="img/partnerships/Xinweilian_logo.jpg"
+							 alt="United Micronations"></a>
+						<a class="inline-block" target="_blank" href="https://www.github.com/Wollongong-Council/"><img class="rounded w-20 m-1"
+							 src="img/partnerships/Wollongong_logo.jpg" alt="Wollongong Council"></a>
+					</div>
+				</div>
+				<div class="w-full px-4 py-2">
+					<h1 class="mb-1 text-xl font-bold">友情链接&nbsp;<span class="text-xs font-light">（按字母表排序）</span></h1>
+					<div id="friendlinks">
+						<a class="inline-block" target="_blank" href="http://arkny.top/"><img class="rounded w-20 m-1" src="img/partnerships/friendlinks/arkny.jpg"
+							 alt="The Principality of Alcania"></a>
+						<a class="inline-block" target="_blank" href="https://www.duianit.cn/"><img class="rounded w-20 m-1" src="img/partnerships/friendlinks/duianit.jpg"
+							 alt="DuianIT"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer -->
+		<!--= JavaScript -->
+		<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+		<script src="https://unpkg.com/promise-polyfill@8/dist/polyfill.js"></script>
+		<script src="https://unpkg.com/sweetalert2@9.17.1/dist/sweetalert2.all.min.js"></script>
+		<script src="https://unpkg.com/typed.js@2.0.11/lib/typed.min.js"></script>
+		<script>
+			function notAvailable(){
+				Swal.fire({title: '当前功能未开放！',icon: 'warning',confirmButtonText: '确认'});
+				return false;
+			}
+			var browserLang = (navigator.browserLanguage || navigator.language).toLowerCase();
+			if (browserLang == 'en' || browserLang == 'en-us') {
+				swal.fire({
+					title: 'Global Site',
+					text: 'Are you visiting CMNIC.org from an English-speaking country? Visit our global site to find out more about our services in your area.',
+					type: 'warning',
+					showCancelButton: true,
+					cancelButtonText: 'Continue to CMNIC.org(Chinese)',
+					confirmButtonText: 'Go to global site',
+				}).then((result) => {
+					if (result.value) {
+						window.open('../global.cmnic.org/', '_blank');
+					}
+				});
+			}
+
+			function togglenavshow() {
+				$('#navlist').toggleClass('hidden');
+			}
+			var options = {
+				strings: ['为虚拟国谋未来。', '创造属于你的新世界。'],
+				typeSpeed: 160,
+				backSpeed: 60,
+				loop: true
+			};
+			var main_typed = new Typed('#main-typed', options);
+		</script>
+	</body>
+</html>
