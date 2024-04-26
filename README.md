@@ -30,6 +30,11 @@ CMNIC 所涉及的主要為中文網絡虛擬國，這些虛擬國通常建立�
 
 “虛擬城邦” 平台允許用戶創建國家，並提供了類似貼吧的論壇功能。此外，平台還設置了 “世界” “新聞” 等全站性板塊，以及集成了 “虛元” 支付系統。
 
+## 目錄
+
+- 網頁
+  - 中文虛擬國互聯網絡信息中心網頁 ([www.cmnic.org](//memorial.cmnic.org/gallery/www.cmnic.org/), Aug 2020)
+  - CMNIC Global Webpages ([global.cmnic.org](//memorial.cmnic.org/gallery/global.cmnic.org/), Aug 2020 *Under Construction*)
 
 ## 參見
 
